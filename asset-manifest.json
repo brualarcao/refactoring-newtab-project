@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/refactoring-newtab-project/static/css/main.3e993436.chunk.css",
-    "main.js": "/refactoring-newtab-project/static/js/main.986a220b.chunk.js",
-    "main.js.map": "/refactoring-newtab-project/static/js/main.986a220b.chunk.js.map",
-    "runtime-main.js": "/refactoring-newtab-project/static/js/runtime-main.8362fd8a.js",
-    "runtime-main.js.map": "/refactoring-newtab-project/static/js/runtime-main.8362fd8a.js.map",
-    "static/js/2.50c414a1.chunk.js": "/refactoring-newtab-project/static/js/2.50c414a1.chunk.js",
-    "static/js/2.50c414a1.chunk.js.map": "/refactoring-newtab-project/static/js/2.50c414a1.chunk.js.map",
+    "main.js": "/refactoring-newtab-project/static/js/main.39cc4e52.chunk.js",
+    "main.js.map": "/refactoring-newtab-project/static/js/main.39cc4e52.chunk.js.map",
+    "runtime-main.js": "/refactoring-newtab-project/static/js/runtime-main.0ab5cbb1.js",
+    "runtime-main.js.map": "/refactoring-newtab-project/static/js/runtime-main.0ab5cbb1.js.map",
+    "static/js/2.91e33f08.chunk.js": "/refactoring-newtab-project/static/js/2.91e33f08.chunk.js",
+    "static/js/2.91e33f08.chunk.js.map": "/refactoring-newtab-project/static/js/2.91e33f08.chunk.js.map",
     "index.html": "/refactoring-newtab-project/index.html",
-    "precache-manifest.4553fcbc26e0c047d57a98383d61ba24.js": "/refactoring-newtab-project/precache-manifest.4553fcbc26e0c047d57a98383d61ba24.js",
+    "precache-manifest.2808053052b9de70b3615ae125865c73.js": "/refactoring-newtab-project/precache-manifest.2808053052b9de70b3615ae125865c73.js",
     "service-worker.js": "/refactoring-newtab-project/service-worker.js",
     "static/css/main.3e993436.chunk.css.map": "/refactoring-newtab-project/static/css/main.3e993436.chunk.css.map",
-    "static/js/2.50c414a1.chunk.js.LICENSE.txt": "/refactoring-newtab-project/static/js/2.50c414a1.chunk.js.LICENSE.txt"
+    "static/js/2.91e33f08.chunk.js.LICENSE.txt": "/refactoring-newtab-project/static/js/2.91e33f08.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.8362fd8a.js",
-    "static/js/2.50c414a1.chunk.js",
+    "static/js/runtime-main.0ab5cbb1.js",
+    "static/js/2.91e33f08.chunk.js",
     "static/css/main.3e993436.chunk.css",
-    "static/js/main.986a220b.chunk.js"
+    "static/js/main.39cc4e52.chunk.js"
   ]
 }
