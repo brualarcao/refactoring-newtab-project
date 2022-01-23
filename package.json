@@ -1,6 +1,6 @@
 {
-  "name": "meu-primeiro-app",
-  "homepage": "https://brualarcao.github.io/refactoring-newtab-project",
+  "name": "refactoring-newtab-project",
+  "homepage": "refactoring-newtab-project/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
