@@ -5,13 +5,19 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #31324F;
 }
 
 .container {
-    background-image: linear-gradient(#31324F, #1F202E);
+    background-color: #1F202E;
     margin-top: 0.063rem;
     align-items: center;
     padding: 1.25rem;
+    max-width: 850px;
+    margin: 12px;
+    border-radius: 5px;
 }
 
 .content {
@@ -41,6 +47,7 @@ button {
     font-size: 15px;
     color: #000000;
     font-weight: bold;
+    border-radius: 6px;
 }
 
 /* CSS dos Modals */
@@ -50,6 +57,7 @@ button {
     position: fixed;
     top: 50%;
     left: 50%;
+    border-radius: 8px;
     right: 'auto';
     bottom: 'auto';
     margin-right: -50%;
@@ -57,7 +65,7 @@ button {
     width: 310px;
     height: 190px;
     flex-direction: column;
-    background-color: white;
+    background-color: #31324F;
     justify-content: space-between;
     align-items: center;
     border: 1px solid black;
@@ -68,10 +76,13 @@ button {
     background-color: #474971;
     color: #FFFFFF;
     padding: 10px;
-    width: 94%;
+    width: 290px;
     margin-top: 0%;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
     align-content: center;
     font-weight: bold;
+    border-bottom: 1px solid black;
 }
 
 .texto-cabecalho-modal span {
@@ -100,6 +111,12 @@ button {
     width: 100%;
     align-items: center;
     justify-content: center;
+    border-radius: 5px;
+}
+
+.valorInput input {
+    border-radius: 5px;
+    height: 18px;
 }
 
 .valorInput p {

@@ -41,6 +41,7 @@ const [abrirNaoRecebeu, setAbrirNaoRecebeu] = useState(""); // Para msg de erro 
 const [valorCartao, setValorCartao] = useState("1"); // Para pegar o cartão escolhido para pagamento
 const [valorDinheiro, setValorDinheiro] = useState(""); // Para pegar o valor de pagamento digitado
 const [validarCampo, setValidarCampo] = useState("none"); // Para validar campo de valor digitado
+const [backgroundColor, setBackgroundColor] = useState(''); // Determinar feedback visual
 
 // Função para abrir o modal de pagamento do usuário
 const abrirModalPagar = (name) => {
@@ -56,8 +57,10 @@ const abrirModalPagou = () => {
         {
         if (valorCartao === "1") {
             setAbrirNaoRecebeu("");
+            setBackgroundColor("#63ba68");
         } else {
             setAbrirNaoRecebeu("não");
+            setBackgroundColor("#ffcc33")
         }
         setAbrirPagamento("none");
         setAbrirPagou("flex");
@@ -108,7 +111,7 @@ const valorInput = (event) => {
             </div>  
 
             {/*------------------------------Abrir Modal de recibo de pagamento--------------------------------*/}
-            <div className="abrirModal" style={{display: abrirPagou}}>
+            <div className="abrirModal" style={{display: abrirPagou, backgroundColor: backgroundColor}}>
                 <p className="texto-cabecalho-modal">Recibo de pagamento</p>
                 <p>O Pagamento <b>{abrirNaoRecebeu}</b> foi concluído com sucesso</p>
                 <button onClick={()=>{fecharModal()}}>Fechar</button>
@@ -117,4 +120,4 @@ const valorInput = (event) => {
     )
 }
 
-export default ListaDeUsuarios
+export default ListaDeUsuarios;
