@@ -9,7 +9,7 @@ const ListaDeUsuarios = () => {
     useEffect(() => {
         axios.get('https://www.mocky.io/v2/5d531c4f2e0000620081ddce', {
             method: 'GET',
-        }).then((resposta) => {setInfos(resposta.data)})
+        }).then((resposta) => {setInfos(resposta.data)});
     }, [])
 
 // Mock com lista de cartões para teste
@@ -82,7 +82,7 @@ const valorInput = (event) => {
 
 // Renderizando na tela as informações recebidas da API 
     return (
-        <>
+        <div className="main" data-testid="users_options">
             {infos.map(item => (
                 <div className="container" key={item.index}>
                     <div className="content">
@@ -97,26 +97,29 @@ const valorInput = (event) => {
             ))}
 
             {/*--------------------------------Abrir Modal de pagamento----------------------------------*/}
-            <div className="abrirModal" style={{display: abrirPagamento}}>
+            <div className="abrirModal" data-testid="choose_card_modal" style={{display: abrirPagamento}}>
                 <p className="texto-cabecalho-modal">Pagamento para <span>{pegarUsuario}</span></p>
                 <div className="valorInput">
                 <NumberFormat thousandSeparator={true} value={valorDinheiro} onChange={valorInput} prefix={'R$ '} inputmode="numeric" placeholder="R$ 0,00"/>
                 <p style={{display:validarCampo}}>Campo obrigatório</p>
                 </div>
-                <select value={valorCartao} onChange={escolhaDoCartao}>
+                <select data-testid="card_choose" value={valorCartao} onChange={escolhaDoCartao}>
                 <option value="1">Cartão com final {cards[0].card_number.substr(-4)}</option>
                 <option value="2">Cartão com final {cards[1].card_number.substr(-4)}</option>
                 </select>
+                <div className="buttons">
                 <button onClick={()=>{abrirModalPagou ()}}>Pagar</button>
+                <button onClick={()=>{setAbrirPagamento('none')}}>Cancelar</button>
+                </div>
             </div>  
 
             {/*------------------------------Abrir Modal de recibo de pagamento--------------------------------*/}
-            <div className="abrirModal" style={{display: abrirPagou, backgroundColor: backgroundColor}}>
+            <div className="abrirModal" data-testid="final_modal" style={{display: abrirPagou, backgroundColor: backgroundColor}}>
                 <p className="texto-cabecalho-modal">Recibo de pagamento</p>
-                <p>O Pagamento <b>{abrirNaoRecebeu}</b> foi concluído com sucesso</p>
-                <button onClick={()=>{fecharModal()}}>Fechar</button>
+                <p>O Pagamento <b data-testid="rejected_payment">{abrirNaoRecebeu}</b> foi concluído com sucesso</p>
+                <button data-testid="close_modal" onClick={()=>{fecharModal()}}>Fechar</button>
             </div>
-        </>
+        </div>
     )
 }
 
