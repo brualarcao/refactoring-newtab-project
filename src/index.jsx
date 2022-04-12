@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ListaDeUsuarios from './ListaDeUsuarios';
+import Dashboard from './pages/Dashboard'
 
 ReactDOM.render(
   <React.StrictMode>
-    <ListaDeUsuarios />
+    <Dashboard />
   </React.StrictMode>,
   document.getElementById('root')
 );

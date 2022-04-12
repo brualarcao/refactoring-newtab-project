@@ -4,20 +4,26 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: center;
     background-color: #31324F;
 }
 
-.container {
+.main {
+    margin-top: 3rem;
+}
+
+.container_content {
+    display: flex;
     background-color: #1F202E;
     margin-top: 0.063rem;
     align-items: center;
     padding: 1.25rem;
     max-width: 850px;
     margin: 12px;
-    border-radius: 5px;
+    border-radius: 8px;
+    border: 1px solid #66ced6;
 }
 
 .buttons {
@@ -27,9 +33,11 @@ body {
 }
 
 .content {
-    max-width: 800px;
+    max-width: 830px;
+    width: 100%;
     margin: 0 auto;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
     justify-content: space-between;
     align-items: center;
 }
@@ -40,12 +48,19 @@ body {
 }
 
 .infos {
-    margin-right: auto;
+    width: 100%;
+
+    font-size: 16px;
+    color: #fff;
 }
 
-.infos p {
+.infos span {
     font-size: 18px;
-    color: #FFF;
+    color: #66ced6;
+}
+
+.content button {
+    justify-self: flex-end;
 }
 
 button {
@@ -57,6 +72,7 @@ button {
     border-radius: 6px;
     width: 85px;
     margin-right: 8px;
+    
 }
 
 /* CSS dos Modals */
@@ -77,7 +93,7 @@ button {
     background-color: #31324F;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid black;
+    border: 1px solid #66ced6;
 }
 
 .texto-cabecalho-modal {
@@ -95,7 +111,7 @@ button {
 }
 
 .texto-cabecalho-modal span {
-    color: #C8D63C;
+    color: #66ced6;
     font-weight: bold;
 }
 
@@ -137,6 +153,19 @@ button {
 
 /* Media Queries */
 
+@media screen and (min-width: 1200px) {
+    .main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 510px) {
+    .infos span {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 412px) and (min-width: 391px) {
     .thumbnail {
         width: 75px;
@@ -144,6 +173,10 @@ button {
 
     .infos p {
         font-size: 15px;
+    }
+
+    .infos span {
+        display: none;
     }
 }
 
@@ -155,6 +188,10 @@ button {
     .infos p {
         font-size: 15px;
     }
+
+    .infos span {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 375px) and (min-width: 361px) {
@@ -165,9 +202,13 @@ button {
     .infos p {
         font-size: 15px;
     }
+
+    .infos span {
+        display: none;
+    }
 }
 
-@media screen and (max-width: 360px) and (min-width: 280px) {
+@media screen and (max-width: 360px) {
     .thumbnail {
         width: 60px;
     }
@@ -178,5 +219,9 @@ button {
 
     button {
         font-size: 10px;
+    }
+
+    .infos span {
+        display: none;
     }
 }

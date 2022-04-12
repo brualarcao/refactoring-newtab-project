@@ -84,12 +84,13 @@ const valorInput = (event) => {
     return (
         <div className="main" data-testid="users_options">
             {infos.map(item => (
-                <div className="container" key={item.index}>
+                <div className="container_content" key={item.index}>
                     <div className="content">
                         <img className="thumbnail" src={item.img} alt="Foto do usuário" />
                         <div className="infos">   
-                            <p>Nome do Usuário: {item.name}</p>
-                            <p>ID: {item.id} - Username: {item.username}</p>
+                            <span>Nome do usuário: </span>  {item.name} <br />
+                            <span>ID: </span> {item.id} <br />
+                            <span>Username: </span> {item.username}
                         </div>
                         <button className="botao-pagar" onClick={()=>{abrirModalPagar(item.name)}}>Pagar</button>
                     </div>
@@ -108,8 +109,8 @@ const valorInput = (event) => {
                 <option value="2">Cartão com final {cards[1].card_number.substr(-4)}</option>
                 </select>
                 <div className="buttons">
-                <button onClick={()=>{abrirModalPagou ()}}>Pagar</button>
                 <button onClick={()=>{setAbrirPagamento('none')}}>Cancelar</button>
+                <button style={{color: "#66ced6"}} onClick={()=>{abrirModalPagou ()}}>Pagar</button>
                 </div>
             </div>  
 
